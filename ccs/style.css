@@ -8,68 +8,94 @@
 /* Comenzamos con el diseño para el index.html */
 
 body{
-    background-color: cornsilk;
+    background-color: rgb(252, 252, 252);
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 100%;
 }
 
 header{
-    font-size: large;
     display: grid;
-    padding: 10px 0px 10px 10px;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid black;
 }
 
-header, footer{
-    background-color: #97bcdb9e;
-    border: 1px solid black;
+header, footer, h1{
+    background-color: rgb(219, 153, 153);
 }
 
 h1{
+    display: block;
+    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    text-align: center;
+    margin-top: 3px;
+    font-size: 14px;
+    height: 1em;
+    border: 1px solid black;
+}
+
+/* Se agrega la clase box para manejar el título del html personajes, que por alguna razón no se comporta como el resto. Seguramente tuvo algo que ver el Bootstrap.  */
+
+.box{
+    
+    margin-top: 3px;
+    margin-bottom: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 3em;
+    border: 1px solid black;
 }
 
 .grilla-imagen{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5px;
 }
 
 .imagen{
-    margin-left: 3px;
     border: 5px solid black;
     width: 95%;
 }
 
 .grilla-datos{
     padding-top: 20px;
-    padding-bottom: 20px;
     padding-left: 1.5em;
     list-style-type: none;
+    border-bottom: none;
 }
 
 nav ul li{
     list-style-type: none;
     padding-left: 10px;
+    padding-top: 5px;
+    font-size: 14px;
 }
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 aside{
     display: grid;
     justify-items: center;
+    margin-bottom: 0px;
 }
 
-.summary{
+.sum{
     padding-top: 20px;
     padding-bottom: 20px;
+}
+    
+.summary{
     text-align: center;
     color: blueviolet;
 }
@@ -78,6 +104,9 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    border-top: 1px solid black;
+    padding: 10px 0px 0px 0px;
+    margin-top: 2px;
 }
 
 /* Declaramos areas para grid-area */
@@ -139,8 +168,7 @@ iframe{
 .press{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 0px 5px 0px 5px;
+    margin: 0px 1em 20px 1em;
 }
 
 h2{
@@ -149,21 +177,14 @@ h2{
     text-align: left;
 }
 
-footer, header{
-    width: 100%;
-    padding: 10px 0px 10px 0px;
-    margin: none;
-}
-
 p{
     color: black;
     font-style: normal;
-    font-size: 15px;
+    font-size: 14px;
     text-align: justify;
     line-height: 20px;
     letter-spacing: 2px;
     word-spacing: 1px;
-    padding-bottom: 20px;
 }
 
 span{
@@ -173,57 +194,118 @@ span{
 .vistula{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    
     margin-left: 5px;
     margin-bottom: 15px;
 }
 
 .vistula1{
     height: 18em;
-}
-
-.vistula3{
-    height: 20em;
-}
-
-.vistula1, .vistula2, .vistula3{
     border: 2px solid black;
     margin-bottom: 5px;
 }
 
+.vistula2{
+    height: 20em;
+    border: 2px solid black;
+    margin-bottom: 5px; 
+}
+
+.vistula3{
+    height: 20em;
+    border: 2px solid black;
+}
+
+/* Aplicamos diseño para personajes.html */
+
+header{
+    width: 130%;
+    border-bottom: 1px solid black;
+}
+
+ul{
+    
+    display: grid;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid black;
+}
+
+footer{
+    width: 100%;
+}
+
+.imgper{
+    height: 18em;
+    border-bottom: 2px solid black;
+    margin-bottom: 0.1px;
+}
+
+.txtper{
+    text-align: center;
+    word-spacing: 1px;
+    height: 15em;
+}
+
+.bordeper{
+    border: 2px solid black;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: block;
+    margin-top: 1em;
+    
+}
+
+.transf:hover{
+    transform: scale(1.2);
+}
 
 
-@media (min-width: 500px){
+
+@media (min-width: 576px){
 
 .imagen{
     border: 5px solid black;
-    width: 80%;
+    width: 30em;
+    height: 50em;
     margin: 20px 0px 0px 0px;
+}
+
+.grilla-imagen{
+    
+    margin-top: 5px;
+    margin-left: 15em;
 }
 
 .grilla-datos{
     padding-top: 0px;
     padding-left: 10px;
     margin-top: 2em;
+    margin-bottom: 10px;
+    margin-left: 10px;
     height: 10%;
 }
 
-body{
-    background-color: rgb(191, 235, 220);
+nav ul{
+    width: 130%;
 }
 
-a{
-    color: white;
+aside{
+    margin-left: 15em;
 }
 
-header, footer{
-    background-color: rgb(121, 233, 121);
+h1, footer{
+    width: 130%;
 }
 
 .sum{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 2em;
     width: 90%;
     height: 5%;
     padding: 0em 2em 2em 2em;
@@ -233,11 +315,10 @@ header, footer{
     color: green;
 }
 
-
 /* Aplicamos diseño para presentacion.html */
 
 p{
-    font-size: 18px;
+    font-size: 16px;
     padding-bottom: 30px;
 }
 
@@ -273,6 +354,11 @@ body{
     height: 90%;
 }
 
+h1{
+    width: 100%;
+    justify-content: center;
+}
+
 .grilla-total{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -280,6 +366,12 @@ body{
     "imagen datos"
     "sum sum";
 }
+
+.grilla-imagen{
+    margin-top: 5px;
+    margin-left: 3em;
+}
+
 
 .grilla-datos{
     margin: 2em 1em 2em 1em;
@@ -308,16 +400,35 @@ body{
     padding: 1em 2em 1em 2em;
 }
 
-header, footer{
-    background-color: rgb(14, 199, 206);
+aside{
+    height: 50em;
+    margin-left: 2em;
+    padding: 0px;
+}
+
+iframe{
+    height: 45em;
 }
 
 /* Diseño para presentacion.html */
+
+.press{
+    margin-top: 2em;
+    margin-bottom: 5em;
+
+}
+
+footer{
+    width: 100%;
+    margin-bottom: 0px;
+    justify-content: center;
+}
 
 .vistula{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 25em;
 }
 
 .vistula1{
@@ -326,9 +437,41 @@ header, footer{
     margin-left: 2em;
 }
 
+/* Incluimos una animación de rotación y acercamiento para la foto 1 */
+
+.vistula1:hover{
+    animation: foto1 3s;
+}
+
+@keyframes foto1{
+    10%{
+        transform: rotate(360deg);
+    }
+    60%{
+        transform: scale(2);
+    }
+    
+}
+
 .vistula2{
     width: 15em;
     height: 10em;
+}
+
+/* Incluimos una animación de rotación y acercamiento para la foto 2 */
+
+.vistula2:hover{
+    animation: foto2 3s;
+}
+
+@keyframes foto2{
+    10%{
+        transform: rotate(360deg);
+    }
+    60%{
+        transform: scale(2);
+    }
+    
 }
 
 .vistula3{
@@ -340,7 +483,35 @@ header, footer{
 
 }
 
-@media (min-width: 1024px){
+/* Incluimos una animación de rotación y acercamiento para la foto 3 */
+
+.vistula3:hover{
+    animation: foto3 3s;
+}
+
+@keyframes foto3{
+    10%{
+        transform: rotate(360deg);
+    }
+    60%{
+        transform: scale(2);
+    }
+    
+}
+
+
+@media (min-width: 992px){
+
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav ul{
+    margin-left: -1em;
+}
 
 .grilla-total{
     display: grid;
@@ -367,9 +538,7 @@ header, footer{
     border: 3px solid rgb(59, 7, 7);
 }
 
-header{
-    padding-right: 10px;
-}
+
 
 nav ul{
     font-size: large;
@@ -381,18 +550,15 @@ nav ul{
     height: 50px;
 }
 
+p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
 aside{
     width: 100%;
     margin: none;
     padding: none;
-}
-
-body{
-    background-color: rgb(212, 179, 179);
-}
-
-header, footer{
-    background-color: rgb(105, 3, 3)
 }
 
 /* Aplicamos diseño para presentación.html */
