@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 0.5em 0em 0em 0em;
+    margin-right: 1px;
+    margin-top: 0.5em;
+    background-color: rgb(240, 69, 69);
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        border-top: 1px solid black;
+        padding: 10px 0px 0px 0px;
+        margin-top: 2px;
+        background-color: rgb(240, 69, 69);
+    }
+}

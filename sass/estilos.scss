@@ -1,0 +1,539 @@
+@import "generales";
+@import "navbar";
+@import "titulos-parrafos";
+@import "footer";
+
+/* Comenzamos por la Media Querie de 0 a 576 px */
+
+
+/* Contruimos el diseño para index.html */
+
+
+/* Class del conjunto de la foto-tapa */
+
+.grilla-total {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90%;
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+iframe {
+    border: 2px solid rgb(228, 36, 36);
+    width: 65%;
+
+}
+
+/* Declaramos areas para grid-area */
+
+header {
+    grid-area: header;
+}
+
+h1 {
+    grid-area: titulo;
+}
+
+.grilla-total {
+    grid-area: total;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* Acomodamos la grilla principal */
+
+.grilla-principal {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "titulo"
+        "total"
+        "aside"
+        "footer";
+}
+
+.grilla-imagen {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    justify-items: center;
+}
+
+.imagen {
+    width: 65%;
+    border: 2px solid rgb(228, 36, 36);
+    margin-left: 1em;
+}
+
+/* Class de los datos del costado */
+
+.grilla-datos {
+    padding: 20px 1em 10px 0em;
+    list-style-type: none;
+    border: 2px solid rgb(228, 36, 36);
+    width: 75%;
+    height: 90%;
+    margin-left: 1em;
+}
+
+/* Oración inferior */
+
+.summary {
+    text-align: center;
+    color: black;
+    border: 2px solid rgb(228, 36, 36);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 75%;
+
+}
+
+
+/* Aplicamos diseño para presentacion.html */
+
+.vistula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vistula1 {
+    margin-right: 1.5em;
+    margin-bottom: 2em;
+    border: 3px solid black;
+    width: 90%;
+}
+
+.vistula2 {
+    margin-bottom: 2em;
+    margin-right: 1em;
+    border: 3px solid black;
+    width: 90%;
+}
+
+.vistula3 {
+    margin-right: 0.7em;
+    margin-bottom: 2em;
+    border: 3px solid black;
+    width: 90%;
+}
+
+
+/* Aplicamos diseño para personajes.html */
+
+.imgper {
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.txtper {
+    text-align: center;
+    font-size: smaller;
+
+
+}
+
+.bordeper {
+    border: 2px solid black;
+    margin-bottom: 10px;
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+.transf:hover {
+    transform: scale(1.2);
+}
+
+/* Aplicamos diseño para marco.html */
+
+/*Aplicamos diseño para marco.html */
+
+
+.marco {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.cenizas {
+    margin: 1em;
+    font-size: 12px;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.holocausto {
+    background-color: rgb(252, 250, 228);
+    margin: 1em;
+}
+
+.parrafohol {
+    margin: 1em;
+    font-size: 12px;
+    font-weight: lighter;
+    font-style: normal
+}
+
+.fotohol {
+    height: 30%;
+    width: 90%;
+    margin: 1em 1em 1em 1em;
+}
+
+/* Diseño para página contacto.html */
+
+.parcont {
+    margin: 1em;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90%;
+    height: 20px;
+    color: rgb(228, 36, 36);
+    background-color: whitesmoke;
+    margin: 1em;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.div2 {
+    width: 90%;
+    height: 40px;
+    border: 2px solid black;
+    background-color: rgb(228, 36, 36)e;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom: 2em;
+}
+
+.div3 {
+    @extend.div1;
+}
+
+.div4 {
+    @extend.div2;
+}
+
+.div5 {
+    @extend.div4;
+    height: 80px;
+    margin-bottom: 1em;
+}
+
+
+
+/* Continuamos por la Media Querie de 576 a 768 px */
+
+
+@media (min-width: 576px) {
+
+    /* Contruimos el diseño para index.html */
+
+    .grilla-total {
+        align-items: center;
+    }
+
+    .imagen {
+        height: 50em;
+        margin-top: 5em;
+        margin-bottom: 1em;
+        margin-left: 7em;
+        align-items: center;
+        border: 3px solid rgb(228, 36, 36);
+    }
+
+    .grilla-datos {
+        margin-left: 4.5em;
+    }
+
+    /* Oración inferior */
+
+    .summary {
+        align-items: center;
+        margin-top: 2em;
+        margin-bottom: 0em;
+        margin-left: 5em;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        width: 90%;
+        height: 50%;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 7em;
+        margin-top: 0em;
+    }
+
+    iframe {
+        border: 2px solid rgb(228, 36, 36);
+    }
+
+}
+
+
+
+/* Continuamos por la Media Querie de 768 a 992 px */
+
+
+/* Contruimos el diseño para index.html */
+
+
+@media (min-width: 768px) {
+
+    .grilla-datos {
+        margin-left: 4.5em;
+        border: 2px solid rgb(228, 36, 36);
+    }
+
+    .imagen {
+        border: 2px solid rgb(228, 36, 36);
+    }
+
+
+    /* Diseño para presentacion.html */
+
+    .press {
+        margin-top: 2em;
+        margin-bottom: 5em;
+
+    }
+
+    .vistula {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 25em;
+    }
+
+    .vistula1 {
+        width: 10em;
+        height: 10em;
+        margin-left: 2em;
+    }
+
+    /* Incluimos una animación de rotación y acercamiento para la foto 1 */
+
+    .vistula1:hover {
+        animation: foto1 3s;
+    }
+
+    @keyframes foto1 {
+        10% {
+            transform: rotate(360deg);
+        }
+
+        60% {
+            transform: scale(2);
+        }
+
+    }
+
+    .vistula2 {
+        width: 15em;
+        height: 10em;
+    }
+
+    /* Incluimos una animación de rotación y acercamiento para la foto 2 */
+
+    .vistula2:hover {
+        animation: foto2 3s;
+    }
+
+    @keyframes foto2 {
+        10% {
+            transform: rotate(360deg);
+        }
+
+        60% {
+            transform: scale(2);
+        }
+
+    }
+
+    .vistula3 {
+        width: 10em;
+        height: 10em;
+    }
+
+
+    /* Incluimos una animación de rotación y acercamiento para la foto 3 */
+
+    .vistula3:hover {
+        animation: foto3 3s;
+    }
+
+    @keyframes foto3 {
+        10% {
+            transform: rotate(360deg);
+        }
+
+        60% {
+            transform: scale(2);
+        }
+    }
+
+    /* Diseño para página contacto.html */
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: initial;
+    }
+
+    /* Se define a continuación la variable $fsize y se efectúa una operación sencilla para el height */
+
+    $fsize: 18px;
+
+    .div1 {
+        width: 20%;
+        height: ($fsize*3)-4;
+        border: 2px solid black;
+        color: white;
+        background-color: rgb(228, 36, 36);
+        margin: 5em 2em 2em 6em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .div2 {
+        width: 40%;
+        height: 50px;
+        border: 2px solid black;
+        background-color: whitesmoke;
+        margin-top: 5em;
+        margin-bottom: 2em;
+        font-size: 18px;
+    }
+
+    .div3 {
+        @extend.div1;
+        margin: 0em 3em 2em 5em;
+    }
+
+    .div4 {
+        @extend.div2;
+        margin-top: 0em;
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+
+    .div5 {
+        @extend.div4;
+        height: 200px;
+        margin-bottom: 10em;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    /* Diseño página presentación.html */
+
+
+    .vistula {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5px;
+        margin-bottom: 15px;
+    }
+
+    .vistula1 {
+        height: 10em;
+        border: 2px solid black;
+        margin-bottom: 8px;
+    }
+
+    .vistula2 {
+        height: 10em;
+        border: 2px solid black;
+        margin-bottom: 8px;
+    }
+
+    .vistula3 {
+        height: 10em;
+        border: 2px solid black;
+        margin-bottom: 8px;
+    }
+
+
+    /* Diseño para página marco.html */
+
+    .holocausto {
+        display: grid;
+        grid-template-columns: 8fr 1fr;
+        grid-template-rows: 10em;
+        column-gap: 19px;
+        margin-bottom: 3em;
+        background-color: rgb(252, 250, 228);
+        border: 1px solid rgb(228, 36, 36);
+    }
+
+    .cenizas {
+        font-size: 16px;
+    }
+
+    /* Incluimos un mixin, que se utiliza en la siguiente class */
+
+@mixin font ($size, $weight, $style) {
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+
+.parrafohol {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 10px;
+    height: 5em;
+    width: 100%;
+    @include font (16px, lighter, normal);
+}
+
+
+.fotohol {
+    height: 5em;
+    width: 80%;
+    border: 1px solid rgb(228, 36, 36);
+}
+}
+
+
+

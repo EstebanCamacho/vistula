@@ -1,0 +1,89 @@
+h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(240, 188, 120);
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 20px;
+    }
+}
+
+/* Aplicamos diseño para presentación.html */
+
+.press {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 1em 20px 1em;
+
+    h2 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+    }
+
+    p {
+        color: black;
+        font-style: normal;
+        font-size: 14px;
+        text-align: justify;
+        line-height: 20px;
+        letter-spacing: 2px;
+        word-spacing: 1px;
+
+        @media (min-width: 576px) {
+            font-size: 16px;
+            padding-bottom: 30px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 20px;
+            font-weight: lighter;
+        }
+    }
+}
+
+span {
+    font-style: oblique;
+}
+
+/* Aplicamos diseño para personajes.html */
+
+/* Se agrega la class box para corregir el desfasaje provocado por Bootstrap en el h1 del html personajes. */
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(240, 188, 120);
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 20px;
+    }
+}
