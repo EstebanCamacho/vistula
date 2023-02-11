@@ -17,7 +17,7 @@ header {
                     list-style-type: none;
                     padding-left: 10px;
                     padding-top: 5px;
-                    font-size: 14px;
+                    font-size: 18px;
                     font-weight: bold;
 
                     a {
@@ -47,7 +47,7 @@ header {
                     list-style-type: none;
                     padding-left: 10px;
                     padding-top: 5px;
-                    font-size: 16px;
+                    font-size: 20px;
                     font-weight: bold;
 
                     a {
@@ -72,7 +72,7 @@ header {
         nav {
 
             ul {
-                margin-left: -1em;
+                margin-left: 1.5em;
                 font-size: large;
                 display: flex;
                 flex-direction: row;
@@ -85,7 +85,7 @@ header {
                     list-style-type: none;
                     padding-left: 10px;
                     padding-top: 5px;
-                    font-size: 20px;
+                    font-size: 22px;
 
                     a {
                         text-decoration: none;
@@ -98,56 +98,78 @@ header {
 
 }
 
-/* Agregamos la siguiente class header para corregir el desfasaje de Bootstrap en la navbar */
+/* Agregamos la siguiente class person para corregir el desfasaje de Bootstrap en la navbar */
 
-.header {
-    @media (max-width: 576px) {
-
+.person {
+        
         nav {
-            ul {
-                padding-left: 0em;
-                height: 105px;
-                margin-bottom: 0em;
-
-                li {
-                    padding-left: 10px;
-                    height: 21px;
+            width: 100%;
+            height: 12em;
+                ul {
+                    padding-left: 0px;
+                    padding-bottom: 0px;
+                    margin-bottom: 0px;
+                    height: 8.1em;
+                        li {
+                            padding-left: 10px;
+                            padding-top: 5px;
+                            height: 1.45em;
+                                a {
+                                    text-decoration: none;
+                                    color: white;
+                                }
+                            }
                 }
-            }
         }
-    }
+    
 
     @media (min-width: 576px) {
 
-
         nav {
-            ul {
-                padding-left: 0em;
-                height: 115px;
-                margin-bottom: 0em;
-
-                li {
-                    padding-left: 10px;
-                    height: 18px;
+            width: 100%;
+                ul {
+                    padding-left: 0px;
+                    padding-bottom: 0px;
+                    height: 8rem;
+                        li {
+                            padding-left: 10px;
+                            padding-top: 0px;
+                                a {
+                                    text-decoration: none;
+                                    color: white;
+                                }
+                            }
                 }
-            }
         }
     }
 
     @media (min-width: 992px) {
 
+        
 
         nav {
-            height: 50px;
-
+                width: 42.1em;
+                height: 39.1%;
             ul {
-                padding-left: 0em;
+                margin-left: 1.5em;
+                font-size: large;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 90.2%;
                 height: 50px;
-                margin-bottom: 0em;
 
                 li {
+                    list-style-type: none;
                     padding-left: 10px;
-                    height: 23px;
+                    padding-top: 5px;
+                    font-size: 22px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
                 }
             }
         }

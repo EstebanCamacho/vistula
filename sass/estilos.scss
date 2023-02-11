@@ -3,33 +3,87 @@
 @import "titulos-parrafos";
 @import "footer";
 
-/* Comenzamos por la Media Querie de 0 a 576 px */
 
+
+/* Comenzamos por la Media Querie de 0 a 576 px */
 
 /* Contruimos el diseño para index.html */
 
 
-/* Class del conjunto de la foto-tapa */
+/* Class grilla-imagen del conjunto de la foto-tapa, datos y frase */
 
-.grilla-total {
+.grilla-imagen {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 90%;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    justify-items: center;
 }
 
-aside {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 1em;
+.imagen {
+    width: 65%;
+    border: 2px solid black;
     margin-left: 1em;
 }
 
-iframe {
-    border: 2px solid rgb(228, 36, 36);
-    width: 65%;
+/* Class de los datos del recuadro */
 
+.grilla-datos {
+    padding: 20px 1em 10px 0em;
+    list-style-type: none;
+    font-size: 14px;
+    border: 2px solid black;
+    width: 75%;
+    height: 90%;
+    margin-left: 1em;
 }
+
+/* Oración inferior */
+
+.summary {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.frase {
+    font-size: 14px;
+    color: black;
+    border: 2px solid black;
+    margin: 1.5em 0em 0.5em 1.3em;
+    padding: 10px 1em 10px 1em;
+    width: 50%;
+}
+
+.grilla-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    border: 2px solid black;
+    width: 80%;
+    margin-left: 1em;
+    margin-top: 0.3em;
+}
+
+.trenes {
+    border: 2px solid black;
+    width: 65%;
+    margin-left: 1em;
+}
+
+.gheto {
+    border: 2px solid black;
+    width: 65%;
+    margin-left: 1em;
+}
+
+
+
 
 /* Declaramos areas para grid-area */
 
@@ -41,11 +95,15 @@ h1 {
     grid-area: titulo;
 }
 
-.grilla-total {
-    grid-area: total;
+.grilla-imagen {
+    grid-area: imagen;
 }
 
-aside {
+.summary {
+    grid-area: summary;
+}
+
+grilla-aside {
     grid-area: aside;
 }
 
@@ -60,52 +118,11 @@ footer {
     grid-template-areas:
         "header"
         "titulo"
-        "total"
+        "imagen"
+        "summary"
         "aside"
         "footer";
 }
-
-.grilla-imagen {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 5px;
-    justify-items: center;
-}
-
-.imagen {
-    width: 65%;
-    border: 2px solid rgb(228, 36, 36);
-    margin-left: 1em;
-}
-
-/* Class de los datos del costado */
-
-.grilla-datos {
-    padding: 20px 1em 10px 0em;
-    list-style-type: none;
-    border: 2px solid rgb(228, 36, 36);
-    width: 75%;
-    height: 90%;
-    margin-left: 1em;
-}
-
-/* Oración inferior */
-
-.summary {
-    text-align: center;
-    color: black;
-    border: 2px solid rgb(228, 36, 36);
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 2em;
-    margin-right: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    width: 75%;
-
-}
-
 
 /* Aplicamos diseño para presentacion.html */
 
@@ -116,7 +133,7 @@ footer {
 }
 
 .vistula1 {
-    margin-right: 1.5em;
+    margin-right: 0.7em;
     margin-bottom: 2em;
     border: 3px solid black;
     width: 90%;
@@ -124,7 +141,7 @@ footer {
 
 .vistula2 {
     margin-bottom: 2em;
-    margin-right: 1em;
+    margin-right: 0.7em;
     border: 3px solid black;
     width: 90%;
 }
@@ -139,23 +156,29 @@ footer {
 
 /* Aplicamos diseño para personajes.html */
 
+.contper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .imgper {
     width: 100%;
     border-bottom: 2px solid black;
+    height: 15em;
 }
 
 .txtper {
     text-align: center;
-    font-size: smaller;
-
-
+    font-size: 14px;
+    height: 15em;
 }
 
 .bordeper {
     border: 2px solid black;
-    margin-bottom: 10px;
-    overflow: hidden;
     margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .transf:hover {
@@ -163,9 +186,6 @@ footer {
 }
 
 /* Aplicamos diseño para marco.html */
-
-/*Aplicamos diseño para marco.html */
-
 
 .marco {
     display: flex;
@@ -176,9 +196,10 @@ footer {
 
 .cenizas {
     margin: 1em;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: lighter;
     font-style: normal;
+    text-align: justify;
 }
 
 .holocausto {
@@ -188,7 +209,7 @@ footer {
 
 .parrafohol {
     margin: 1em;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: lighter;
     font-style: normal
 }
@@ -199,10 +220,11 @@ footer {
     margin: 1em 1em 1em 1em;
 }
 
-/* Diseño para página contacto.html */
+/* Aplicamos diseño para página contacto.html */
 
 .parcont {
     margin: 1em;
+    font-size: 14px;
 }
 
 .contact {
@@ -235,7 +257,16 @@ footer {
 }
 
 .div3 {
-    @extend.div1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90%;
+    height: 20px;
+    color: rgb(228, 36, 36);
+    background-color: whitesmoke;
+    margin: 1em;
+    font-size: 12px;
+    font-weight: normal;
 }
 
 .div4 {
@@ -255,73 +286,83 @@ footer {
 
 @media (min-width: 576px) {
 
-    /* Contruimos el diseño para index.html */
 
-    .grilla-total {
-        align-items: center;
+/* Construimos el diseño para index.html */
+
+    .trenes {
+        
+        width: 55%;
+        margin-left: 1em;
+    }
+    
+    .gheto {
+        
+        width: 55%;
+        margin-left: 1em;
     }
 
-    .imagen {
-        height: 50em;
-        margin-top: 5em;
-        margin-bottom: 1em;
-        margin-left: 7em;
-        align-items: center;
-        border: 3px solid rgb(228, 36, 36);
+    .grilla-datos{
+        font-size: 16px;
     }
 
-    .grilla-datos {
-        margin-left: 4.5em;
+    .frase {
+        font-size: 16px;
+    }
+    
+/* Contruimos el diseño para marco.html */
+
+    .cenizas {
+        font-size: 16px;
     }
 
-    /* Oración inferior */
-
-    .summary {
-        align-items: center;
-        margin-top: 2em;
-        margin-bottom: 0em;
-        margin-left: 5em;
-        padding-top: 1em;
-        padding-bottom: 0.5em;
-        width: 90%;
-        height: 50%;
+    .parrafohol {
+        font-size: 16px;
     }
 
-    aside {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-left: 7em;
-        margin-top: 0em;
+/* Contruimos el diseño para contacto.html */ 
+
+    .parcont {
+        font-size: 16px;
     }
 
-    iframe {
-        border: 2px solid rgb(228, 36, 36);
+    .div1 {
+        font-size: 14px;
     }
-
 }
-
 
 
 /* Continuamos por la Media Querie de 768 a 992 px */
 
 
-/* Contruimos el diseño para index.html */
-
-
 @media (min-width: 768px) {
 
-    .grilla-datos {
-        margin-left: 4.5em;
-        border: 2px solid rgb(228, 36, 36);
-    }
+/* Construimos el diseño para index.html */
 
-    .imagen {
-        border: 2px solid rgb(228, 36, 36);
-    }
+.grilla-datos {
+    margin-top: 0.5em;
+}
 
+.frase {
+    margin-top: 2.3em;
+}
 
-    /* Diseño para presentacion.html */
+.grilla-aside{
+    margin-bottom: 0.5em;
+}
+
+.trenes {
+        
+    width: 45%;
+    margin-left: 1em;
+}
+
+.gheto {
+    
+    width: 45%;
+    margin-left: 1em;
+}
+
+/* Diseño para presentacion.html */
 
     .press {
         margin-top: 2em;
@@ -342,7 +383,7 @@ footer {
         margin-left: 2em;
     }
 
-    /* Incluimos una animación de rotación y acercamiento para la foto 1 */
+/* Incluimos una animación de rotación y acercamiento para la foto 1 */
 
     .vistula1:hover {
         animation: foto1 3s;
@@ -364,7 +405,7 @@ footer {
         height: 10em;
     }
 
-    /* Incluimos una animación de rotación y acercamiento para la foto 2 */
+/* Incluimos una animación de rotación y acercamiento para la foto 2 */
 
     .vistula2:hover {
         animation: foto2 3s;
@@ -387,7 +428,7 @@ footer {
     }
 
 
-    /* Incluimos una animación de rotación y acercamiento para la foto 3 */
+/* Incluimos una animación de rotación y acercamiento para la foto 3 */
 
     .vistula3:hover {
         animation: foto3 3s;
@@ -403,7 +444,17 @@ footer {
         }
     }
 
-    /* Diseño para página contacto.html */
+
+/* Diseño para página personajes.html */
+
+/* Centrado de última foto */
+
+    .ingrid {
+        width: 100%;
+    }
+
+
+/* Diseño para página contacto.html */
 
     .contact {
         display: flex;
@@ -412,7 +463,7 @@ footer {
         align-items: initial;
     }
 
-    /* Se define a continuación la variable $fsize y se efectúa una operación sencilla para el height */
+/* Se define a continuación la variable $fsize y se efectúa una operación sencilla para el height */
 
     $fsize: 18px;
 
@@ -422,11 +473,9 @@ footer {
         border: 2px solid black;
         color: white;
         background-color: rgb(228, 36, 36);
-        margin: 5em 2em 2em 6em;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        margin: 6.5em 1em 2em 4em;
         justify-content: center;
+        align-items: center;
         font-size: 18px;
         font-weight: bold;
     }
@@ -436,14 +485,20 @@ footer {
         height: 50px;
         border: 2px solid black;
         background-color: whitesmoke;
-        margin-top: 5em;
-        margin-bottom: 2em;
-        font-size: 18px;
-    }
+        margin: 7.4em -1em 0em 2.5em;
+        }
 
     .div3 {
-        @extend.div1;
+        width: 20%;
+        height: ($fsize*3)-4;
+        border: 2px solid black;
+        color: white;
+        background-color: rgb(228, 36, 36);
         margin: 0em 3em 2em 5em;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
     }
 
     .div4 {
@@ -461,10 +516,87 @@ footer {
 
 }
 
+/* Continuamos por la Media Querie superior a los 992 px */
+
 @media (min-width: 992px) {
 
-    /* Diseño página presentación.html */
+/* Diseño página index.html */
 
+    .grilla-imagen {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imagen {
+        width: 55%;
+        border: 2px solid black;
+        margin-left: 2em;
+    }
+
+    .grilla-datos {
+        padding: 20px 1em 10px 0em;
+        list-style-type: none;
+        font-size: 18px;
+        border: 2px solid black;
+        width: 65%;
+        height: 95%;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .summary {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        
+    }
+    
+    .frase {
+        font-size: 18px;
+        color: black;
+        margin: 1.5em 0em 1.5em 1.3em;
+        padding: none;
+        width: 100%;
+        border: none;
+    }
+
+    .grilla-aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    
+    iframe {
+        border: 2px solid black;
+        width: 90%;
+        height: 15em;
+        margin-left: 2em;
+    }
+    
+    .trenes {
+        border: 2px solid black;
+        width: 25%;
+        height: 15em;
+        margin-left: 0px;
+    }
+    
+    .gheto {
+        border: 2px solid black;
+        width: 25%;
+        height: 15em;
+        margin-left: 2em;
+        margin-right: 0px;
+    }
+    
+
+
+/* Diseño página presentación.html */
 
     .vistula {
         display: flex;
@@ -491,8 +623,18 @@ footer {
         margin-bottom: 8px;
     }
 
+    
 
-    /* Diseño para página marco.html */
+/* Diseño para página personajes.html */
+
+/* Descentrado de última foto */
+
+    .ingrid {
+        width: 33%;
+    }
+
+
+/* Diseño para página marco.html */
 
     .holocausto {
         display: grid;
@@ -502,13 +644,14 @@ footer {
         margin-bottom: 3em;
         background-color: rgb(252, 250, 228);
         border: 1px solid rgb(228, 36, 36);
+        height: 7em;
     }
 
     .cenizas {
-        font-size: 16px;
+        font-size: 18px;
     }
 
-    /* Incluimos un mixin, que se utiliza en la siguiente class */
+/* Incluimos un mixin, que se utiliza en la siguiente class */
 
 @mixin font ($size, $weight, $style) {
     font-size: $size;
@@ -520,7 +663,8 @@ footer {
 .parrafohol {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    font-size: 18px;
     margin-left: 10px;
     height: 5em;
     width: 100%;
@@ -533,6 +677,17 @@ footer {
     width: 80%;
     border: 1px solid rgb(228, 36, 36);
 }
+
+/* Diseño para página contacto.html */
+
+.parcont {
+    font-size: 18px;
+}
+
+.div1 {
+    font-size: 18px;
+}
+
 }
 
 
